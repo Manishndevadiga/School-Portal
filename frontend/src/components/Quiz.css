@@ -1,0 +1,88 @@
+/* Quiz.css */
+
+/* Style for the entire quiz container */
+.quiz-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+/* Style for quiz title */
+.quiz-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Style for each question box */
+.question-box {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+/* Style for question text */
+.question-text {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+/* Style for options list */
+.options-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Style for each option */
+.option {
+  margin-bottom: 8px;
+}
+
+/* Style for checkbox input */
+.option-checkbox {
+  margin-right: 10px;
+}
+
+/* Style for label (option text) */
+.option-label {
+  cursor: pointer;
+  display: flex;
+  align-items: center; /* Aligns option text and checkbox vertically */
+}
+
+/* Style for 'Show Results' button */
+.show-results-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.show-results-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Style for correct/incorrect answer display */
+.answer-display {
+  margin-top: 10px;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.correct-answer {
+  color: green;
+}
+
+.incorrect-answer {
+  color: red;
+}

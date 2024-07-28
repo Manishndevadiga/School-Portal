@@ -1,0 +1,147 @@
+body {
+    font-family: Arial, sans-serif;
+    /*background-image: url('https://t4.ftcdn.net/jpg/02/52/15/95/360_F_252159531_5hyXvKjfN406Oj3HT3G6ADrWmUxOeBLZ.jpg');*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    color: white;
+    border: 2px solid #fff;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #0c0c0c;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #080808;
+    outline: none;
+}
+
+input:invalid, textarea:invalid {
+    border-color: red;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #ccc;
+}
+
+input:focus, textarea:focus {
+    border-color: #5cb85c;
+}
+
+.phone-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.phone-container input {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.phone-container button {
+    position: absolute;
+    right: -5px;
+    top: 26%;
+    transform: translateY(-50%);
+    padding: 10px 15px;
+    background-color: #5cb85c;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.phone-container button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #5cb85c;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #4cae4c;
+}
+
+button.remove-phone-button {
+    background-color: #d9534f;
+    margin-left: 5px;
+    padding: 10px 15px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.remove-phone-button:hover {
+    background-color: #c9302c;
+}
+
+.error-message {
+    color: red;
+    margin-top: 5px;
+    display: block;
+    background-color: rgba(255, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.hint {
+    font-size: 0.9em;
+    color: #ccc;
+    display: block;
+    margin-top: -10px;
+    margin-bottom: 15px;
+}
+
+input[type='password']{
+    color: #0c0c0c;
+    visibility:visible;
+}
