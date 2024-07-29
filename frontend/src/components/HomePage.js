@@ -483,12 +483,28 @@ const HomePage = () => {
     fetchMentors();
   }, []);
 
-  const handleCourseChange = (event) => {
-    setSelectedCourse(event.target.value);
-  };
+  const handleCourseChange = async (event) => {
+    const course = event.target.value;
+    setSelectedCourse(course);
 
-  const handleMentorChange = (event) => {
-    setSelectedMentor(event.target.value);
+    if (course) {
+      try {
+        const response = await fetch(
+          `http://localhost:10000/mentors-by-course/${course}`
+        );
+        const data = await response.json();
+        if (data.length > 0) {
+          setSelectedMentor(data[0].name);
+        } else {
+          setSelectedMentor("");
+        }
+      } catch (error) {
+        console.error("Error fetching mentors for course:", error);
+        setSelectedMentor("");
+      }
+    } else {
+      setSelectedMentor("");
+    }
   };
 
   const handleTimingChange = (event) => {
@@ -627,19 +643,8 @@ const HomePage = () => {
           </div>
 
           <div className="form-group">
-            <label htmlFor="mentor">Choose a Mentor:</label>
-            <select
-              id="mentor"
-              value={selectedMentor}
-              onChange={handleMentorChange}
-            >
-              <option value="">Select a Mentor</option>
-              {mentors.map((mentor) => (
-                <option key={mentor.id} value={mentor.name}>
-                  {mentor.name}
-                </option>
-              ))}
-            </select>
+            <label htmlFor="mentor">Assigned Mentor:</label>
+            <input type="text" id="mentor" value={selectedMentor} readOnly />
           </div>
 
           <div className="form-group">
